@@ -1,6 +1,6 @@
 package domain;
 
-public class Producte {
+public abstract class Producte {
 
 	private double preu;
 	
@@ -11,5 +11,8 @@ public class Producte {
 	public double getPreu() {
 		return preu;
 	}
+	
+	@Override
+	public abstract String toString();
 	
 }

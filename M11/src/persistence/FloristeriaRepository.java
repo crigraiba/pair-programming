@@ -3,12 +3,13 @@ package persistence;
 import java.util.ArrayList;
 import java.util.List;
 
+import domain.Producte;
+
 public class FloristeriaRepository {
 	
 	private static List<Producte> productes = new ArrayList<>();
 
 	public FloristeriaRepository() {
-
 	}
 
 	public List<Producte> getProductes() {

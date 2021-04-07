@@ -17,4 +17,9 @@ public class Decoracio extends Producte {
 		return material;
 	}
 	
+	@Override
+	public String toString() {
+		return "Material: " + material + ", Preu: " + getPreu() + " €";
+	}
+	
 }

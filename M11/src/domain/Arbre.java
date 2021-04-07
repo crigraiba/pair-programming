@@ -13,4 +13,9 @@ public class Arbre extends Producte {
 		return altura;
 	}
 	
+	@Override
+	public String toString() {
+		return "Altura: " + altura + " m, Preu: " + getPreu() + " €";
+	}
+	
 }
