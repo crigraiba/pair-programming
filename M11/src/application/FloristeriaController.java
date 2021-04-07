@@ -20,6 +20,15 @@ public class FloristeriaController {
 		repository.addProducte(arbre);
 	}
 	
+	/*
+	 * 	TODO: mètodes per crear la resta de productes
+	 */
+	
+	public void String printStock() {
+		
+	}
+	
+	
 
 	
 	
