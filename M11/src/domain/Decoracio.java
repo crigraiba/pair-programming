@@ -4,7 +4,7 @@ public class Decoracio extends Producte {
 
 	private Material material;
 	
-	private enum Material {
+	public enum Material {
 		FUSTA, PLASTIC;
 	}
 	

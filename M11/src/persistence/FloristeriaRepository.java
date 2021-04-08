@@ -20,10 +20,4 @@ public class FloristeriaRepository {
 		productes.add(producte);
 	}
 
-	
-	
-	
-	
-	
-
 }
