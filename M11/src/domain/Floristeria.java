@@ -1,5 +1,7 @@
 package domain;
 
+import java.util.List;
+
 public class Floristeria {
 	
 	private String nom;
@@ -18,9 +20,9 @@ public class Floristeria {
 	}
 	
 	@Override
-	// public String printFloristeria (List<Producte> productes) {
+	// public String printFloristeria (List<Producte> productes) { ?
 	public String toString() {
-		// TODO Separar en funció de la subclasse
+		// Separació en funció de la subclasse
 		// \t tabulació
 
 		StringBuilder sbArbres = new StringBuilder();
