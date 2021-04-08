@@ -3,7 +3,7 @@ package domain;
 public class Floristeria {
 	
 	private String nom;
-	// private List<Producte> productes;
+	// private List<Producte> productes; ?
 
 	public Floristeria(String nom) {
 		this.nom = nom;
@@ -18,18 +18,30 @@ public class Floristeria {
 	}
 	
 	@Override
+	// public String printFloristeria (List<Producte> productes) {
 	public String toString() {
-		StringBuilder sb = new StringBuilder();
-		
 		// TODO Separar en funció de la subclasse
 		// \t tabulació
+
+		StringBuilder sbArbres = new StringBuilder();
+		StringBuilder sbFlors = new StringBuilder();
+		StringBuilder sbDecoracions = new StringBuilder();
 		
-		// FIXME
+		sbArbres.append("\n\tARBRES:");
+		sbFlors.append("\tFLORS:");
+		sbDecoracions.append("\tDECORACIONS:");
+		
+		// FIXME d'on surt la llista productes?
 		for (Producte producte : productes) {
-			sb.append("\n\t\t" + producte.toString());
+			if (producte instanceof Arbre)
+				sbArbres.append("\n\t\t" + producte.toString());
+			else if (producte instanceof Flor)
+				sbFlors.append("\n\t\t" + producte.toString());
+			else if (producte instanceof Decoracio)
+				sbDecoracions.append("\n\t\t" + producte.toString());
 		}
 		
-		return "Nom:" + nom + "\nStock:" + sb.toString();
+		return "Nom:" + nom + "\nStock:" + sbArbres.toString() + sbFlors.toString() + sbDecoracions.toString();
 	}
 
 }

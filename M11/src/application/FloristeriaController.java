@@ -24,13 +24,10 @@ public class FloristeriaController {
 	 * 	TODO: mètodes per crear la resta de productes
 	 */
 	
+	// public void printStrock(Floristeria floristeria) {
 	public void printStock() {
-		// FIXME instància d'on la trec
+		// FIXME instància floristeria d'on la trec
 		return System.out.println(floristeria.toString());
 	}
-	
-	
-
-	
 	
 }
