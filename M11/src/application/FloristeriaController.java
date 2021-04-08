@@ -1,27 +1,26 @@
 package application;
 
-
-import domain.Arbre;
-
 import java.awt.Color;
-
-
-import domain.Decoracio;
-import domain.Decoracio.Material;
-import domain.Flor;
 
 import domain.Floristeria;
 import persistence.FloristeriaRepository;
+import domain.Producte;
+import domain.Arbre;
+import domain.Flor;
+import domain.Decoracio;
+import domain.Decoracio.Material;
 
 public class FloristeriaController {
 	
 	private FloristeriaRepository repository = new FloristeriaRepository();
 
+	private Floristeria floristeria;
+	
 	public FloristeriaController() {
 	}
 	
 	public void createFloristeria(String nom) {
-		Floristeria floristeria = new Floristeria(nom);
+		floristeria = new Floristeria(nom);
 	}
 	
 	public void createArbre(double altura, double preu) {
@@ -39,11 +38,27 @@ public class FloristeriaController {
 		repository.addProducte(flor);
 	}
 	
-	
-	// public void printStrock(Floristeria floristeria) {
-	public void printStock() {
-		// FIXME instància floristeria d'on la trec
-		return System.out.println(floristeria.toString());
+	public String getStock() {
+		// Separació en funció de la subclasse
+
+		StringBuilder sbArbres = new StringBuilder();
+		StringBuilder sbFlors = new StringBuilder();
+		StringBuilder sbDecoracions = new StringBuilder();
+		
+		sbArbres.append("\n\tARBRES:");
+		sbFlors.append("\n\tFLORS:");
+		sbDecoracions.append("\n\tDECORACIONS:");
+		
+		for (Producte producte : repository.getProductes()) {
+			if (producte instanceof Arbre)
+				sbArbres.append("\n\t\t" + producte.toString());
+			else if (producte instanceof Flor)
+				sbFlors.append("\n\t\t" + producte.toString());
+			else if (producte instanceof Decoracio)
+				sbDecoracions.append("\n\t\t" + producte.toString());
+		}
+		
+		return "Nom: " + floristeria.getNom() + "\nStock:" + sbArbres.toString() + sbFlors.toString() + sbDecoracions.toString();
 	}
 	
 }

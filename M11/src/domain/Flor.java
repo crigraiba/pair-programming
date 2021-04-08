@@ -17,7 +17,7 @@ public class Flor extends Producte {
 
 	@Override
 	public String toString() {
-		return "Color: " + color + ", Preu: " + getPreu() + " €";
+		return "Color: (" + color.getRed() + "," + color.getGreen() + "," + color.getBlue() + "), Preu: " + getPreu() + " €";
 	}
 	
 }

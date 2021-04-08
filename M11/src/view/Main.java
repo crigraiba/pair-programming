@@ -10,7 +10,6 @@ public class Main {
 	private static FloristeriaController controller = new FloristeriaController();
 
 	public static void main(String[] args) {
-		
 		controller.createFloristeria("Flors i Violes");
 
 		controller.createArbre(12.5, 500);
@@ -19,6 +18,8 @@ public class Main {
 		controller.createDecoracio(Material.PLASTIC, 85.75);
 		controller.createFlor(Color.red, 26.15);
 		controller.createFlor(Color.yellow, 21.65);
+		
+		System.out.println(controller.getStock());
 	}
 
 }
