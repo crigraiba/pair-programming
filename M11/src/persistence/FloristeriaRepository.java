@@ -3,6 +3,8 @@ package persistence;
 import java.util.ArrayList;
 import java.util.List;
 
+import domain.Producte;
+
 public class FloristeriaRepository {
 	
 	private static List<Producte> productes = new ArrayList<>();
@@ -18,11 +20,5 @@ public class FloristeriaRepository {
 	public void addProducte(Producte producte) {
 		productes.add(producte);
 	}
-
-	
-	
-	
-	
-	
 
 }

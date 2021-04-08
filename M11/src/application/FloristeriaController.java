@@ -1,5 +1,11 @@
 package application;
 
+import java.awt.Color;
+
+import domain.Arbre;
+import domain.Decoracio;
+import domain.Decoracio.Material;
+import domain.Flor;
 import domain.Floristeria;
 import persistence.FloristeriaRepository;
 
@@ -15,14 +21,21 @@ public class FloristeriaController {
 		Floristeria floristeria = new Floristeria(nom);
 	}
 	
-	public void createArbre(double altura) {
-		Arbre arbre = new Arbre(altura);
+	public void createArbre(double altura, double preu) {
+		Arbre arbre = new Arbre(altura, preu);
 		repository.addProducte(arbre);
 	}
 	
-	/*
-	 * 	TODO: mètodes per crear la resta de productes
-	 */
+	public void createDecoracio(Material material, double preu) {
+		Decoracio decoracio = new Decoracio(material, preu);
+		repository.addProducte(decoracio);
+	}
+	
+	public void createFlor(Color color, double preu) {
+		Flor flor = new Flor(color, preu);
+		repository.addProducte(flor);
+	}
+	
 	
 	public void String printStock() {
 		
