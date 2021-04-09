@@ -8,10 +8,14 @@ import domain.Producte;
 public class FloristeriaRepository {
 	
 	private static List<Producte> productes = new ArrayList<>();
+	private static List<Ticket> tickets= new ArrayList<>();
 
 	public FloristeriaRepository() {
 	}
 
+	
+	// --- Mètodes de productes ---
+	
 	public List<Producte> getProductes() {
 		return new ArrayList<>(productes);
 	}
@@ -34,4 +38,15 @@ public class FloristeriaRepository {
 		productes.remove(producte);
 	}
 
+	
+	// --- Mètodes de tickets ---
+	
+	public List<Ticket> getTickets() {
+		return new ArrayList<>(tickets);
+	}
+	
+	public void addTicket(Ticket ticket) {
+		tickets.add(ticket);
+	}
+	
 }
