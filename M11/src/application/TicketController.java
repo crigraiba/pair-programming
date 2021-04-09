@@ -16,7 +16,6 @@ public class TicketController {
 	}
 	
 	public void createTicket(int[] ids) {
-		
 		List<Producte> productes = new ArrayList<>();
 		double total = 0;
 		
@@ -33,16 +32,18 @@ public class TicketController {
 		repository.addTicket(ticket);
 	}
 	
-	//TODO getTickets and print - Cristina
 	public String getTickets() {
 		StringBuilder sb = new StringBuilder();
 		
 		sb.append("Tickets:");
 		
 		for (Ticket ticket : repository.getTickets()) {
-			sb.append("\n----------------------------------------"); // Separació entre tickets
+			sb.append("\n-------------------------------------------------------"); // Separació entre tickets
+			
 			sb.append("\n" + ticket.toString());
 		}
+		
+		sb.append("\n-------------------------------------------------------");
 		
 		return sb.toString();
 	}

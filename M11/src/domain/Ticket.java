@@ -5,14 +5,13 @@ import java.util.List;
 
 public class Ticket {
 	
-	private List<Producte> productes; // producte1 (id1) prod2 (id2)
+	private List<Producte> productes;
 	private double total;
 	private int id = 0;
 	
-	private static int count; // id1 id2
+	private static int count;
 	
-	public Ticket(List<Producte> productes) {		
-	// public Ticket() {
+	public Ticket(List<Producte> productes) {
 		this.productes = productes;
 		
 		count++;
@@ -39,11 +38,10 @@ public class Ticket {
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		
-		for (Producte producte : productes) {
+		for (Producte producte : productes)
 			sb.append("\n\t" + producte.toString());
-		}
 		
-		return "Id: " + id + "\nProductes:" + sb.toString() + "\nTotal: " + total;
+		return "Id: " + id + "\nProductes:" + sb.toString() + "\nTotal: " + total + " €";
 	}
 	
 }

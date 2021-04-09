@@ -25,11 +25,11 @@ public class Main {
 		productesController.createFlor(Color.red, 26.15);
 		productesController.createFlor(Color.yellow, 21.65);
 		
-		// Impressió del stock i el valor total de la floristeria:
+		// Impressió del stock i valor total de la floristeria:
 		System.out.println(controller.getStock());
 		System.out.println(controller.getValor());
 		
-		// Esborrem productes segons el seu id:
+		// Esborrar productes segons el seu id:
 		productesController.deleteProducte(1);
 		productesController.deleteProducte(3);
 		
@@ -41,7 +41,7 @@ public class Main {
 		System.out.println(controller.getValor());
 		
 		// Creació de tickets:
-		ticketController.createTicket(new int[]{2});
+		ticketController.createTicket(new int[]{4});
 		ticketController.createTicket(new int[]{5, 6});
 		
 		// Impressió dels tickets:
@@ -56,6 +56,12 @@ public class Main {
 		
 		System.out.println(controller.getStock());
 		System.out.println(controller.getValor());
+		
+		// Impressió del total de diners guanyats amb les vendes:
+		System.out.println(); // Separació
+		System.out.println();
+		
+		// TODO Victor
 	}
 
 }
