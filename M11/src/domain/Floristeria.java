@@ -24,9 +24,5 @@ public class Floristeria {
 	public static void updateValor(double preu) {
 		valor += preu;
 	}
-<<<<<<< HEAD
 	
-=======
-
->>>>>>> cristina_sprint3
 }
