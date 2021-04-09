@@ -3,10 +3,12 @@ package domain;
 public class Arbre extends Producte {
 
 	private double altura;
+	private static int quantitat;
 	
 	public Arbre(double altura, double preu) {
 		super(preu);
 		this.altura = altura;
+		quantitat++;
 	}
 	
 	public double getAltura() {
@@ -15,7 +17,9 @@ public class Arbre extends Producte {
 	
 	@Override
 	public String toString() {
-		return "Altura: " + altura + " m, Preu: " + getPreu() + " €";
+		return "Altura: " + altura + " m, Preu: " + getPreu() + " €" + " ID" + id;
 	}
+	
+	
 	
 }

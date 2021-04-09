@@ -20,6 +20,7 @@ public class Main {
 		controller.createFlor(Color.yellow, 21.65);
 		
 		System.out.println(controller.getStock());
+		System.out.println(controller.getValor());
 	}
 
 }
