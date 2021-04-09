@@ -19,7 +19,7 @@ public class Decoracio extends Producte {
 	
 	@Override
 	public String toString() {
-		return "Material: " + material + ", Preu: " + getPreu() + " €";
+		return "Material: " + material + ", Preu: " + getPreu() + " €" + " ID" + id;
 	}
 	
 }

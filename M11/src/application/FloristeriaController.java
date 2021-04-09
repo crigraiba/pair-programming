@@ -26,16 +26,19 @@ public class FloristeriaController {
 	public void createArbre(double altura, double preu) {
 		Arbre arbre = new Arbre(altura, preu);
 		repository.addProducte(arbre);
+		floristeria.updateValor(preu);
 	}
 	
 	public void createDecoracio(Material material, double preu) {
 		Decoracio decoracio = new Decoracio(material, preu);
 		repository.addProducte(decoracio);
+		floristeria.updateValor(preu);
 	}
 	
 	public void createFlor(Color color, double preu) {
 		Flor flor = new Flor(color, preu);
 		repository.addProducte(flor);
+		floristeria.updateValor(preu);
 	}
 	
 	public String getStock() {
@@ -57,8 +60,12 @@ public class FloristeriaController {
 			else if (producte instanceof Decoracio)
 				sbDecoracions.append("\n\t\t" + producte.toString());
 		}
-		
+		// TODO Afegir quantitats
 		return "Nom: " + floristeria.getNom() + "\nStock:" + sbArbres.toString() + sbFlors.toString() + sbDecoracions.toString();
 	}
 	
+	
+	public String getValor() {
+		return "Total: " + floristeria.getValor() + " €";
+	}
 }
