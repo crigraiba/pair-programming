@@ -15,13 +15,17 @@ public class Arbre extends Producte {
 		return altura;
 	}
 	
-//	TODO Cristina - metode getQuantitat()
+	public static int getQuantitat() {
+		return quantitat;
+	}
+	
+	public static void updateQuantitat() {
+		quantitat--;
+	}
 	
 	@Override
 	public String toString() {
-		return "Altura: " + altura + " m, Preu: " + getPreu() + " €" + " ID" + id;
+		return  "Id: " + getId() + ", Altura: " + altura + " m, Preu: " + getPreu() + " €";
 	}
-	
-	
 	
 }

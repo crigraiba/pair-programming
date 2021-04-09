@@ -17,12 +17,16 @@ public class Floristeria {
 		return nom;
 	}
 	
-	public double getValor() {
+	public static double getValor() {
 		return valor;
 	}
 	
 	public static void updateValor(double preu) {
 		valor += preu;
 	}
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> cristina_sprint3
 }

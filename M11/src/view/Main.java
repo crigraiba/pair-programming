@@ -14,7 +14,7 @@ public class Main {
 	public static void main(String[] args) {
 		controller.createFloristeria("Flors i Violes");
 
-		productesController.createArbre(12.5, 600);
+		productesController.createArbre(12.5, 500);
 		productesController.createArbre(8.25, 200);
 		productesController.createDecoracio(Material.FUSTA, 94.85);
 		productesController.createDecoracio(Material.PLASTIC, 85.75);
@@ -26,18 +26,13 @@ public class Main {
 		
 		// Esborrar producte segons el seu id
 		productesController.deleteProducte(1);
-//		productesController.deleteProducte(2);
-//		productesController.deleteProducte(3);
-//		productesController.deleteProducte(4);
-//		productesController.deleteProducte(5);
+		productesController.deleteProducte(3);
 		
 		System.out.println();
 		System.out.println();
 		
 		System.out.println(controller.getStock());
 		System.out.println(controller.getValor());
-		
-		
 	}
 
 }

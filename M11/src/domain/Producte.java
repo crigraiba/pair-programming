@@ -1,16 +1,15 @@
-
 package domain;
 
 public abstract class Producte {
 
 	private double preu;
-	protected int id = 0;
-
-
+	private int id = 0;
+	
 	private static int count;
 	
 	public Producte(double preu) {
 		this.preu = preu;
+		
 		count++;
 		id = count;
 	}
@@ -26,4 +25,3 @@ public abstract class Producte {
 	@Override
 	public abstract String toString();
 }
-

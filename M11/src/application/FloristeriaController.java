@@ -1,14 +1,11 @@
 package application;
 
-import java.awt.Color;
-
 import domain.Floristeria;
 import persistence.FloristeriaRepository;
 import domain.Producte;
 import domain.Arbre;
 import domain.Flor;
 import domain.Decoracio;
-import domain.Decoracio.Material;
 
 public class FloristeriaController {
 	
@@ -23,11 +20,6 @@ public class FloristeriaController {
 		floristeria = new Floristeria(nom);
 	}
 	
-	public void updateFloristeriaValor(double preu) {
-		floristeria.updateValor(preu);
-	}
-
-	
 	public String getStock() {
 		// Separació en funció de la subclasse
 
@@ -39,6 +31,10 @@ public class FloristeriaController {
 		sbFlors.append("\n\tFLORS:");
 		sbDecoracions.append("\n\tDECORACIONS:");
 		
+		sbArbres.append("\n\tQuantitat: " + Arbre.getQuantitat());
+		sbFlors.append("\n\tQuantitat: " + Flor.getQuantitat());
+		sbDecoracions.append("\n\tQuantitat: " + Decoracio.getQuantitat());
+		
 		for (Producte producte : repository.getProductes()) {
 			if (producte instanceof Arbre)
 				sbArbres.append("\n\t\t" + producte.toString());
@@ -48,16 +44,10 @@ public class FloristeriaController {
 				sbDecoracions.append("\n\t\t" + producte.toString());
 		}
 		
-		// TODO Cristina - Afegir quantitats totals de cada tipus (3 getQuantitats)
-		
 		return "Nom: " + floristeria.getNom() + "\nStock:" + sbArbres.toString() + sbFlors.toString() + sbDecoracions.toString();
 	}
-	
-	
+
 	public String getValor() {
-//		return "Total: " + floristeria.getValor() + " €";
-		
-		// Dos decimals:
-		 return "Total: " + Math.round(floristeria.getValor()*100.0)/100.0 + " €";
+		 return "Total: " + Math.round(Floristeria.getValor()*100.0)/100.0 + " €";
 	}
 }
