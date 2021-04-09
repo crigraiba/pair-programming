@@ -23,27 +23,11 @@ public class FloristeriaController {
 		floristeria = new Floristeria(nom);
 	}
 	
-<<<<<<< HEAD
-=======
-	public void createArbre(double altura, double preu) {
-		Arbre arbre = new Arbre(altura, preu);
-		repository.addProducte(arbre);
+	public void updateFloristeriaValor(double preu) {
 		floristeria.updateValor(preu);
 	}
+
 	
-	public void createDecoracio(Material material, double preu) {
-		Decoracio decoracio = new Decoracio(material, preu);
-		repository.addProducte(decoracio);
-		floristeria.updateValor(preu);
-	}
-	
-	public void createFlor(Color color, double preu) {
-		Flor flor = new Flor(color, preu);
-		repository.addProducte(flor);
-		floristeria.updateValor(preu);
-	}
-	
->>>>>>> branch 'development' of https://github.com/crigraiba/pair-programming.git
 	public String getStock() {
 		// Separació en funció de la subclasse
 
@@ -63,7 +47,9 @@ public class FloristeriaController {
 			else if (producte instanceof Decoracio)
 				sbDecoracions.append("\n\t\t" + producte.toString());
 		}
-		// TODO Afegir quantitats
+		
+		// TODO Cristina - Afegir quantitats totals de cada tipus (3 getQuantitats)
+		
 		return "Nom: " + floristeria.getNom() + "\nStock:" + sbArbres.toString() + sbFlors.toString() + sbDecoracions.toString();
 	}
 	

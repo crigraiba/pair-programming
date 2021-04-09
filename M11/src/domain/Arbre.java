@@ -15,6 +15,8 @@ public class Arbre extends Producte {
 		return altura;
 	}
 	
+//	TODO Cristina - metode getQuantitat()
+	
 	@Override
 	public String toString() {
 		return "Altura: " + altura + " m, Preu: " + getPreu() + " €" + " ID" + id;

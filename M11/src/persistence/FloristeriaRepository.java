@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import domain.Producte;
-import domain.Producte.TipusProducte;
 
 public class FloristeriaRepository {
 	
@@ -21,8 +20,17 @@ public class FloristeriaRepository {
 		productes.add(producte);
 	}
 	
-	public void removeProducte(TipusProducte tipusProducte) {
-		
+	public void getProducteById (int id) {
+		for (Producte producte : this.productes) {
+			if (producte.getId() == id) {
+				productes.remove(producte);
+			}
+		}
 	}
+	
+//	TODO -Victor
+//	public void removeProducte(int id) {
+//		
+//	}
 
 }
