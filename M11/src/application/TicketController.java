@@ -15,7 +15,6 @@ public class TicketController {
 		
 	}
 	
-
 	public void createTicket(List<Integer> idsProductes) {
 		
 		Ticket ticket = new Ticket();
@@ -24,13 +23,13 @@ public class TicketController {
 		for(int id : idsProductes) {
 			Producte producte = repository.getProducteById(id); 
 			total += producte.getPreu();
-			ticket.addProducte();
+			ticket.addProducte(producte);
 			productesController.deleteProducte(id);
 		}
 		
 		ticket.setTotal(total);
 		
-		ticketRepo.add(ticket);
+		repository.addTicket(ticket);
 	}
 
 }
