@@ -8,6 +8,8 @@ import domain.Producte;
 public class FloristeriaRepository {
 	
 	private static List<Producte> productes = new ArrayList<>();
+	
+	// TODO List<Ticket> tickets
 
 	public FloristeriaRepository() {
 	}
@@ -20,18 +22,20 @@ public class FloristeriaRepository {
 		productes.add(producte);
 	}
 	
-	public Producte getProducteById (int id) {
+	public Producte getProducteById(int id) {
 		for (Producte producte : productes) {
 			if (producte.getId() == id) {
 				return producte;
 			}
 		}
 		return null;
-
 	}
 	
 	public void removeProducte(Producte producte) {
 		productes.remove(producte);
 	}
+	
+	// TODO void addTicket(Ticket ticket)
+	// TODO Ticket getTicketById(int id)
 
 }

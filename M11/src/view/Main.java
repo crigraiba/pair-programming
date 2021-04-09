@@ -33,6 +33,23 @@ public class Main {
 		
 		System.out.println(controller.getStock());
 		System.out.println(controller.getValor());
+		
+		// Main:
+		// List<Producte>
+		// ticketController.createTicket(new int[1, 2, 3, 4]);
+		
+		// TicketController:
+		// createTicket(List<Integer> ids)
+		
+		// List<Producte> productes
+		
+		// for (int id : ids)
+		// producte = getProducteById(id)
+		// productes.add(producte)
+		
+		// Ticket ticket = new Ticket(productes)
+		// ticket.updateProducte(producte) -> List<Producte> productes de Ticket
+		
 	}
 
 }

@@ -24,4 +24,5 @@ public abstract class Producte {
 	
 	@Override
 	public abstract String toString();
+	
 }
