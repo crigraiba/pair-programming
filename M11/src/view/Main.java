@@ -39,6 +39,12 @@ public class Main {
 		
 		
 		ticketController.createTicket(new int[]{ 1,2,3,4 });
+		
+		
+		
+		// TODO printTickets
+		
+		
 		// Main:
 		// List<Producte>
 		// ticketController.createTicket(new int[1, 2, 3, 4]);
