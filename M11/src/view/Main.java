@@ -1,7 +1,6 @@
 package view;
 
 import java.awt.Color;
-import java.util.ArrayList;
 
 import application.FloristeriaController;
 import application.ProductesController;
@@ -15,8 +14,10 @@ public class Main {
 	private static TicketController ticketController = new TicketController();
 
 	public static void main(String[] args) {
+		// Creació de la floristeria:
 		controller.createFloristeria("Flors i Violes");
 
+		// Creació dels productes:
 		productesController.createArbre(12.5, 500);
 		productesController.createArbre(8.25, 200);
 		productesController.createDecoracio(Material.FUSTA, 94.85);
@@ -24,43 +25,37 @@ public class Main {
 		productesController.createFlor(Color.red, 26.15);
 		productesController.createFlor(Color.yellow, 21.65);
 		
+		// Impressió del stock i el valor total de la floristeria:
 		System.out.println(controller.getStock());
 		System.out.println(controller.getValor());
 		
-		// Esborrar producte segons el seu id
+		// Esborrem productes segons el seu id:
 		productesController.deleteProducte(1);
 		productesController.deleteProducte(3);
 		
-		System.out.println();
+		// Comprovació de que els productes esborrats ja no es troben en stock:
+		System.out.println(); // Separació
 		System.out.println();
 		
 		System.out.println(controller.getStock());
 		System.out.println(controller.getValor());
 		
+		// Creació de tickets:
+		ticketController.createTicket(new int[]{2});
+		ticketController.createTicket(new int[]{5, 6});
 		
-		ticketController.createTicket(new int[]{ 1,2,3,4 });
+		// Impressió dels tickets:
+		System.out.println(); // Separació
+		System.out.println();
 		
+		System.out.println(ticketController.getTickets());
 		
+		// Comprovació de que els productes venuts ja no es troben en stock:
+		System.out.println(); // Separació
+		System.out.println();
 		
-		// TODO printTickets
-		
-		
-		// Main:
-		// List<Producte>
-		// ticketController.createTicket(new int[1, 2, 3, 4]);
-		
-		// TicketController:
-		// createTicket(List<Integer> ids)
-		
-		// List<Producte> productes
-		
-		// for (int id : ids)
-		// producte = getProducteById(id)
-		// productes.add(producte)
-		
-		// Ticket ticket = new Ticket(productes)
-		// ticket.updateProducte(producte) -> List<Producte> productes de Ticket
-		
+		System.out.println(controller.getStock());
+		System.out.println(controller.getValor());
 	}
 
 }

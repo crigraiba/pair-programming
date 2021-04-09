@@ -13,7 +13,6 @@ public class TicketController {
 	private ProductesController productesController= new ProductesController();
 	
 	public TicketController() {
-		
 	}
 	
 	public void createTicket(int[] ids) {
@@ -35,6 +34,18 @@ public class TicketController {
 	}
 	
 	//TODO getTickets and print - Cristina
+	public String getTickets() {
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append("Tickets:");
+		
+		for (Ticket ticket : repository.getTickets()) {
+			sb.append("\n----------------------------------------"); // Separació entre tickets
+			sb.append("\n" + ticket.toString());
+		}
+		
+		return sb.toString();
+	}
 	
 	// TODO calcular i print valor total - Victor
 

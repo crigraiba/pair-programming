@@ -47,7 +47,8 @@ public class FloristeriaRepository {
 	// --- Mètodes de tickets ---
 	
 	public List<Ticket> getTickets() {
-		return new ArrayList<>(tickets);
+		return tickets;
+		// return new ArrayList<>(tickets);
 	}
 	
 	public void addTicket(Ticket ticket) {
