@@ -24,7 +24,7 @@ public class TicketController {
 		for(int id : idsProductes) {
 			Producte producte = repository.getProducteById(id); 
 			total += producte.getPreu();
-			// ticket.addProducte
+			ticket.addProducte();
 			productesController.deleteProducte(id);
 		}
 		
