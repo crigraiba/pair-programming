@@ -4,6 +4,10 @@ public abstract class Producte {
 
 	private double preu;
 	
+	public enum TipusProducte {
+		ARBRE, DECORACIO, FLOR;
+	}
+	
 	public Producte(double preu) {
 		this.preu = preu;
 	}

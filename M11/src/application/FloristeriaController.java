@@ -23,21 +23,6 @@ public class FloristeriaController {
 		floristeria = new Floristeria(nom);
 	}
 	
-	public void createArbre(double altura, double preu) {
-		Arbre arbre = new Arbre(altura, preu);
-		repository.addProducte(arbre);
-	}
-	
-	public void createDecoracio(Material material, double preu) {
-		Decoracio decoracio = new Decoracio(material, preu);
-		repository.addProducte(decoracio);
-	}
-	
-	public void createFlor(Color color, double preu) {
-		Flor flor = new Flor(color, preu);
-		repository.addProducte(flor);
-	}
-	
 	public String getStock() {
 		// Separació en funció de la subclasse
 
