@@ -24,6 +24,19 @@ public class Main {
 		System.out.println(controller.getStock());
 		System.out.println(controller.getValor());
 		
+		// Esborrar producte segons el seu id
+		productesController.deleteProducte(1);
+//		productesController.deleteProducte(2);
+//		productesController.deleteProducte(3);
+//		productesController.deleteProducte(4);
+//		productesController.deleteProducte(5);
+		
+		System.out.println();
+		System.out.println();
+		
+		System.out.println(controller.getStock());
+		System.out.println(controller.getValor());
+		
 		
 	}
 

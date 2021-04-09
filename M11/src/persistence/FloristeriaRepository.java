@@ -20,17 +20,18 @@ public class FloristeriaRepository {
 		productes.add(producte);
 	}
 	
-	public void getProducteById (int id) {
-		for (Producte producte : this.productes) {
+	public Producte getProducteById (int id) {
+		for (Producte producte : productes) {
 			if (producte.getId() == id) {
-				productes.remove(producte);
+				return producte;
 			}
 		}
+		return null;
+
 	}
 	
-//	TODO -Victor
-//	public void removeProducte(int id) {
-//		
-//	}
+	public void removeProducte(Producte producte) {
+		productes.remove(producte);
+	}
 
 }

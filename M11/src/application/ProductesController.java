@@ -37,6 +37,22 @@ public class ProductesController {
 		repository.addProducte(flor);
 	}
 	
+	public void deleteProducte(int id) {
+		// recuperar el producte per id
+		Producte producte = repository.getProducteById(id);
+		
+		if (producte instanceof Arbre) {
+//			Arbre.updateQuantitat();
+		} else if (producte instanceof Decoracio) {
+//			Decoracio.updateQuantitat();
+		} else if (producte instanceof Flor) {
+//			Flor.updateQuantitat();
+		}
+		
+		Floristeria.updateValor(producte.getPreu() * -1);
+		repository.removeProducte(producte);
+	}
+
 	
 	
 

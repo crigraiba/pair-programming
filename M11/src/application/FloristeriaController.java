@@ -55,6 +55,9 @@ public class FloristeriaController {
 	
 	
 	public String getValor() {
-		return "Total: " + floristeria.getValor() + " €";
+//		return "Total: " + floristeria.getValor() + " €";
+		
+		// Dos decimals:
+		 return "Total: " + Math.round(floristeria.getValor()*100.0)/100.0 + " €";
 	}
 }
