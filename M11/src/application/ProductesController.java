@@ -2,11 +2,12 @@ package application;
 
 import java.awt.Color;
 
+import domain.Floristeria;
+import persistence.FloristeriaRepository;
 import domain.Arbre;
 import domain.Decoracio;
 import domain.Flor;
 import domain.Decoracio.Material;
-import persistence.FloristeriaRepository;
 
 public class ProductesController {
 	
@@ -17,21 +18,20 @@ public class ProductesController {
 	
 	public void createArbre(double altura, double preu) {
 		Arbre arbre = new Arbre(altura, preu);
-		Arbre.getQuantitat++;
 		repository.addProducte(arbre);
+		Floristeria.updateValor(preu);
 	}
 	
 	public void createDecoracio(Material material, double preu) {
 		Decoracio decoracio = new Decoracio(material, preu);
-		Decoracio.getQuantitat++;
 		repository.addProducte(decoracio);
+		Floristeria.updateValor(preu);
 	}
 	
 	public void createFlor(Color color, double preu) {
 		Flor flor = new Flor(color, preu);
-		Flor.getQuantitat++;
 		repository.addProducte(flor);
+		Floristeria.updateValor(preu);
 	}
 	
-
 }

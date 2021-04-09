@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import domain.Producte;
-import domain.Producte.TipusProducte;
+// import domain.Producte.TipusProducte;
 
 public class FloristeriaRepository {
 	
@@ -19,10 +19,6 @@ public class FloristeriaRepository {
 	
 	public void addProducte(Producte producte) {
 		productes.add(producte);
-	}
-	
-	public void removeProducte(TipusProducte tipusProducte) {
-		
 	}
 
 }

@@ -3,7 +3,7 @@ package domain;
 public class Floristeria {
 	
 	private String nom;
-	private double valor;
+	private static double valor;
 
 	public Floristeria(String nom) {
 		this.nom = nom;
@@ -17,15 +17,12 @@ public class Floristeria {
 		return nom;
 	}
 	
-	public double getValor() {
+	public static double getValor() {
 		return valor;
 	}
 	
-	public void updateValor(double preu) {
+	public static void updateValor(double preu) {
 		valor += preu;
 	}
-	
-	// floristeria.updateValor(preu)
-	// a ProducteController -> createArbre, createFlor, createDecoracio
 
 }
