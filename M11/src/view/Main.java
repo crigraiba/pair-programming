@@ -1,15 +1,18 @@
 package view;
 
 import java.awt.Color;
+import java.util.ArrayList;
 
 import application.FloristeriaController;
 import application.ProductesController;
+import application.TicketController;
 import domain.Decoracio.Material;
 
 public class Main {
 	
 	private static FloristeriaController controller = new FloristeriaController();
 	private static ProductesController productesController = new ProductesController();
+	private static TicketController ticketController = new TicketController();
 
 	public static void main(String[] args) {
 		controller.createFloristeria("Flors i Violes");
@@ -34,6 +37,8 @@ public class Main {
 		System.out.println(controller.getStock());
 		System.out.println(controller.getValor());
 		
+		
+		ticketController.createTicket(new int[]{ 1,2,3,4 });
 		// Main:
 		// List<Producte>
 		// ticketController.createTicket(new int[1, 2, 3, 4]);

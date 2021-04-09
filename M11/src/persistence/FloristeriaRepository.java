@@ -4,16 +4,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 import domain.Producte;
+import domain.Ticket;
 
 public class FloristeriaRepository {
 	
 	private static List<Producte> productes = new ArrayList<>();
-	
-	// TODO List<Ticket> tickets
+
+	private static List<Ticket> tickets= new ArrayList<>();
+
 
 	public FloristeriaRepository() {
 	}
 
+	
+	// --- Mètodes de productes ---
+	
 	public List<Producte> getProductes() {
 		return new ArrayList<>(productes);
 	}
@@ -38,4 +43,15 @@ public class FloristeriaRepository {
 	// TODO void addTicket(Ticket ticket)
 	// TODO Ticket getTicketById(int id)
 
+	
+	// --- Mètodes de tickets ---
+	
+	public List<Ticket> getTickets() {
+		return new ArrayList<>(tickets);
+	}
+	
+	public void addTicket(Ticket ticket) {
+		tickets.add(ticket);
+	}
+	
 }

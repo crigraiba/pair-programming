@@ -1,3 +1,4 @@
+
 package domain;
 
 import java.util.List;
@@ -41,3 +42,4 @@ public class Ticket {
 	// TODO a TicketController : String getTicket(int id)
 	
 }
+
