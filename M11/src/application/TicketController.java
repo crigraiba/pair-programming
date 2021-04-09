@@ -3,6 +3,7 @@ package application;
 import java.util.List;
 
 import domain.Producte;
+import domain.Ticket;
 import persistence.FloristeriaRepository;
 
 public class TicketController {
@@ -17,7 +18,7 @@ public class TicketController {
 
 	public void createTicket(List<Integer> idsProductes) {
 		
-		Ticket ticket = new Ticket(idsProductes);
+		Ticket ticket = new Ticket();
 		double total = 0;
 		
 		for(int id : idsProductes) {

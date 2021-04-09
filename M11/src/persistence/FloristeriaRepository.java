@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import domain.Producte;
+import domain.Ticket;
 
 public class FloristeriaRepository {
 	
