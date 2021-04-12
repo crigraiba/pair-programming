@@ -9,18 +9,15 @@ import domain.Ticket;
 public class FloristeriaRepository {
 	
 	private static List<Producte> productes = new ArrayList<>();
-
 	private static List<Ticket> tickets= new ArrayList<>();
-
-
+	
 	public FloristeriaRepository() {
 	}
 
-	
 	// --- Mètodes de productes ---
 	
 	public List<Producte> getProductes() {
-		return new ArrayList<>(productes);
+		return productes;
 	}
 	
 	public void addProducte(Producte producte) {
@@ -40,14 +37,10 @@ public class FloristeriaRepository {
 		productes.remove(producte);
 	}
 	
-	// TODO void addTicket(Ticket ticket)
-	// TODO Ticket getTicketById(int id)
-
-	
 	// --- Mètodes de tickets ---
 	
 	public List<Ticket> getTickets() {
-		return new ArrayList<>(tickets);
+		return tickets;
 	}
 	
 	public void addTicket(Ticket ticket) {

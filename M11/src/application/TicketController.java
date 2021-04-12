@@ -13,11 +13,9 @@ public class TicketController {
 	private ProductesController productesController= new ProductesController();
 	
 	public TicketController() {
-		
 	}
 	
 	public void createTicket(int[] ids) {
-		
 		List<Producte> productes = new ArrayList<>();
 		double total = 0;
 		
@@ -34,7 +32,6 @@ public class TicketController {
 		repository.addTicket(ticket);
 	}
 	
-	//TODO getTickets and print - Cristina
 	public String getTickets() {
 		StringBuilder sb = new StringBuilder();
 		double totalVendes = 0;
@@ -54,22 +51,6 @@ public class TicketController {
 		sb.append("\n\nTotal vendes: " + totalVendes + " €");
 		
 		return sb.toString();
-		
-		
 	}
 	
-	// TODO calcular i print valor total - Victor
-//	public String getTotalVendes() {
-//		StringBuilder sb = new StringBuilder();
-//		sb.append("Total vendes: ");
-//		
-//		// Suma del valor de totes les vendes
-//		double totalVendes = 0;
-//		for (Ticket ticket : repository.getTickets()) {
-//			totalVendes += ticket.getTotal();
-//		}
-//		
-//		sb.append(totalVendes);
-//		return sb.toString();
-//	}
 }
