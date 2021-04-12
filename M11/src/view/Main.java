@@ -36,7 +36,7 @@ public class Main {
 		System.out.println();
 		System.out.println();
 
-		System.out.println("     ==== STOCK DESPRÉS D'ESBORRAR EL PRODUCTES 1, 3 ===\n");
+		System.out.println("     ==== STOCK DESPRÉS D'ESBORRAR ELS PRODUCTES 1, 3 ===\n");
 		System.out.println(controller.getStock());
 		System.out.println(controller.getValor());
 
@@ -55,7 +55,7 @@ public class Main {
 		System.out.println();
 		System.out.println();
 		
-		System.out.println("     ==== STOCK DESPRÉS DE COMPRAR EL PRODUCTES 4, 5, 6 ===\n");
+		System.out.println("     ==== STOCK DESPRÉS DE COMPRAR ELS PRODUCTES 4, 5, 6 ===\n");
 		System.out.println(controller.getStock());
 		System.out.println(controller.getValor());
 				
