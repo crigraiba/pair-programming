@@ -50,6 +50,14 @@ public class Main {
 
 		System.out.println("     ==== IMPRESSIÓ DELS TICKETS CREATS I PREU TOTAL DE LES VENDES ===\n");
 		System.out.println(ticketController.getTickets());
+		
+		// Comprovació de que els productes comprats ja no es troben en stock:
+		System.out.println();
+		System.out.println();
+		
+		System.out.println("     ==== STOCK DESPRÉS DE COMPRAR EL PRODUCTES 4, 5, 6 ===\n");
+		System.out.println(controller.getStock());
+		System.out.println(controller.getValor());
 				
 	}
 
