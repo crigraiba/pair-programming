@@ -9,13 +9,13 @@ import domain.Decoracio.Material;
 
 public class Main {
 
-	private static FloristeriaController controller = new FloristeriaController();
+	private static FloristeriaController floristeriaController = new FloristeriaController();
 	private static ProductesController productesController = new ProductesController();
 	private static TicketController ticketController = new TicketController();
 
 	public static void main(String[] args) {
 		// Creació de la floristeria i de productes:
-		controller.createFloristeria("Flors i Violes");
+		floristeriaController.createFloristeria("Flors i Violes");
 		
 		productesController.createArbre(12.5, 500);
 		productesController.createArbre(8.25, 200);
@@ -25,8 +25,8 @@ public class Main {
 		productesController.createFlor(Color.yellow, 21.65);
 
 		System.out.println("     ==== STOCK DESPRÉS DE CREAR ELS PRODUCTES ===\n");
-		System.out.println(controller.getStock());
-		System.out.println(controller.getValor());
+		System.out.println(floristeriaController.getStock());
+		System.out.println(floristeriaController.getValor());
 
 		// Esborrar producte segons el seu id
 		productesController.deleteProducte(1);
@@ -37,8 +37,8 @@ public class Main {
 		System.out.println();
 
 		System.out.println("     ==== STOCK DESPRÉS D'ESBORRAR ELS PRODUCTES 1, 3 ===\n");
-		System.out.println(controller.getStock());
-		System.out.println(controller.getValor());
+		System.out.println(floristeriaController.getStock());
+		System.out.println(floristeriaController.getValor());
 
 		// Creació de tickets:
 		ticketController.createTicket(new int[] { 4 });
@@ -56,8 +56,8 @@ public class Main {
 		System.out.println();
 		
 		System.out.println("     ==== STOCK DESPRÉS DE COMPRAR ELS PRODUCTES 4, 5, 6 ===\n");
-		System.out.println(controller.getStock());
-		System.out.println(controller.getValor());
+		System.out.println(floristeriaController.getStock());
+		System.out.println(floristeriaController.getValor());
 				
 	}
 
