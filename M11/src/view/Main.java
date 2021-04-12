@@ -14,10 +14,9 @@ public class Main {
 	private static TicketController ticketController = new TicketController();
 
 	public static void main(String[] args) {
-		// Creació de la floristeria:
+		// Creació de la floristeriai de productes:
 		controller.createFloristeria("Flors i Violes");
-
-		// Creació dels productes:
+		
 		productesController.createArbre(12.5, 500);
 		productesController.createArbre(8.25, 200);
 		productesController.createDecoracio(Material.FUSTA, 94.85);
@@ -34,7 +33,7 @@ public class Main {
 		productesController.deleteProducte(3);
 		
 		// Comprovació de que els productes esborrats ja no es troben en stock:
-		System.out.println(); // Separació
+		System.out.println();
 		System.out.println();
 		
 		System.out.println(controller.getStock());
@@ -45,20 +44,20 @@ public class Main {
 		ticketController.createTicket(new int[]{5, 6});
 		
 		// Impressió dels tickets:
-		System.out.println(); // Separació
+		System.out.println();
 		System.out.println();
 		
 		System.out.println(ticketController.getTickets());
 		
 		// Comprovació de que els productes venuts ja no es troben en stock:
-		System.out.println(); // Separació
+		System.out.println();
 		System.out.println();
 		
 		System.out.println(controller.getStock());
 		System.out.println(controller.getValor());
 		
 		// Impressió del total de diners guanyats amb les vendes:
-		System.out.println(); // Separació
+		System.out.println();
 		System.out.println();
 		
 		// TODO Victor
