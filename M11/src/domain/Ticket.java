@@ -35,11 +35,15 @@ public class Ticket {
 		return productes;
 	}
 	
-	/*public void updateProducte(Producte producte) {
-		productes.add(producte);
-	}*/
-	
-	// TODO a TicketController : String getTicket(int id)
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		
+		for (Producte producte : productes)
+			sb.append("\n\t" + producte.toString());
+		
+		return "Id: " + id + "\nProductes:" + sb.toString() + "\nTotal: " + total + " €";
+	}
 	
 }
 

@@ -35,7 +35,41 @@ public class TicketController {
 	}
 	
 	//TODO getTickets and print - Cristina
+	public String getTickets() {
+		StringBuilder sb = new StringBuilder();
+		double totalVendes = 0;
+		
+		sb.append("Tickets:");
+		
+		for (Ticket ticket : repository.getTickets()) {
+			sb.append("\n-------------------------------------------------------"); // Separació entre tickets
+			
+			sb.append("\n" + ticket.toString());
+			
+			totalVendes += ticket.getTotal();
+		}
+		
+		sb.append("\n-------------------------------------------------------");
+		
+		sb.append("\n\nTotal vendes: " + totalVendes + " €");
+		
+		return sb.toString();
+		
+		
+	}
 	
 	// TODO calcular i print valor total - Victor
-
+//	public String getTotalVendes() {
+//		StringBuilder sb = new StringBuilder();
+//		sb.append("Total vendes: ");
+//		
+//		// Suma del valor de totes les vendes
+//		double totalVendes = 0;
+//		for (Ticket ticket : repository.getTickets()) {
+//			totalVendes += ticket.getTotal();
+//		}
+//		
+//		sb.append(totalVendes);
+//		return sb.toString();
+//	}
 }
