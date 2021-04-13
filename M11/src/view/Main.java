@@ -55,7 +55,7 @@ public class Main {
 		System.out.println();
 		System.out.println();
 		
-		System.out.println("     ==== STOCK DESPRÉS DE COMPRAR ELS PRODUCTES 4, 5, 6 ===\n");
+		System.out.println("     ==== STOCK DESPRÉS DE LA COMPRA DELS PRODUCTES 4, 5, 6 ===\n");
 		System.out.println(floristeriaController.getStock());
 		System.out.println(floristeriaController.getValor());
 				
